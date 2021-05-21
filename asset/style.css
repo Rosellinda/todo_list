@@ -1,0 +1,28 @@
+* {
+    font-family: 'Lato', sans-serif!important;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+  }
+
+ul > li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    float:right;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+@media (min-width:600px){
+    .container {
+        width: 500px;
+    }
+}
