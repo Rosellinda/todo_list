@@ -2,6 +2,10 @@
     font-family: 'Lato', sans-serif!important;
 }
 
+.container {
+    height: 100vh;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -13,6 +17,10 @@ ul > li {
 
 button {
     cursor: pointer;
+    float:right;
+}
+
+p.date {
     float:right;
 }
 
