@@ -15,15 +15,25 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">TODO LIST</a>
+          <a class="navbar-brand" href="#navbar">TODO LIST</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home
+                <a class="nav-link active" href="#incompletedOItems">Current List
                   <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#new_task">Add task
+                  <span class="visually-hidden"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#completedItems">Completed List
+                  <span class="visually-hidden"></span>
                 </a>
               </li>
               <li class="nav-item dropdown">
@@ -42,7 +52,7 @@
         </div>
     </nav>
     <div class="container my-5">
-        <div class="wrapper m-2">
+        <section class="wrapper m-2">
             <!-- ADD LIST -->
             <h1 class="text-left">Add List</h1>
             <label id="lblsuccess" class="text-success" style="display: none;">
@@ -55,7 +65,7 @@
                 <input type="submit" class="btn btn-outline-success" id="submit" value="Submit" disabled>
             </form>
             <hr>
-            <div class="row">
+            <div class="row" id="incompletedOItems">
                 <!-- TODO -->
                 <div class="col-12">
                     <h2>TODO</h2>
@@ -63,16 +73,20 @@
                         <ul class="list-group" id="items"></ul>
                     </form>
                 </div>
-                <!-- COMPLETED -->
-                <hr class="my-5">
-                <div class="col-12">
-                    <h2>Completed</h2>
-                    <form id="completedForm">
-                      <ul class="list-group" id="completedItems"></ul>
-                    </form>
-                </div>
             </div>
-        </div>
+          </section>
+          <section id="completedItems">
+            <!-- COMPLETED -->
+            <hr class="my-5">
+            <div class="row">
+              <div class="col-12">
+                <h2>Completed</h2>
+                <form id="completedForm">
+                  <ul class="list-group" ></ul>
+                </form>
+              </div>
+            </div>
+          </section>
     </div>
     <footer class="text-center">
         <h6 class="py-5">Copyright @Roselle Burlasa</h6>

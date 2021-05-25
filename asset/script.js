@@ -9,7 +9,10 @@ window.onload = () => {
     addForm.addEventListener("submit", addTask);
     items.addEventListener("click", removeItem);
     items.addEventListener("click", completedItem);
+    
 };
+
+
 
 let addTask = (e) => {
     e.preventDefault();
@@ -40,9 +43,9 @@ let addTask = (e) => {
     let li = document.createElement("li");
         li.className = "list-group-item listItem";
   
-    let deleteButton = document.createElement("button");
-        deleteButton.className = "btn-danger btn btn-sm m-1 delete";
-        deleteButton.appendChild(document.createTextNode("Delete"));
+    let completeButton = document.createElement("button");
+        completeButton.className = "btn-danger btn btn-sm m-1 completeTask";
+        completeButton.appendChild(document.createTextNode("Complete"));
   
     let editButton = document.createElement("button");
         editButton.className = "btn-success btn btn-sm m-1 edit";
@@ -50,7 +53,7 @@ let addTask = (e) => {
 
   
     li.appendChild(document.createTextNode(newItem));
-    li.appendChild(deleteButton);
+    li.appendChild(completeButton);
     li.appendChild(editButton);
   
     items.appendChild(li);
@@ -73,7 +76,7 @@ let completedItem = (e) => {
 
     let completedTask = document.getElementById("completedItems");
 
-    if (e.target.classList.contains("delete")) {
+    if (e.target.classList.contains("completeTask")) {
         if (confirm("Are you Sure?")) {
             //li will become the parent
             let li = e.target.parentNode;
